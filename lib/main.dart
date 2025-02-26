@@ -14,22 +14,38 @@ class MyWidget extends StatelessWidget {
       home: Scaffold(
         drawer: Drawer(
           child: ListView(
-            children: [
-              ListTile(
-                leading: Icon(Icons.home),
-                title: Text('Home'),
-                onTap: () {},
-              ),
-              ListTile(
-                leading: Icon(Icons.settings),
-                title: Text('Settings'),
-                onTap: () {},
-              ),
-              ListTile(
-                leading: Icon(Icons.info),
-                title: Text('About'),
-                onTap: () {},
-              ),
+            children:
+              [
+                SizedBox(
+                  height: 80,
+                  child: DrawerHeader(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(Icons.logo_dev_outlined),
+                        TextButton.icon(
+                          onPressed: () {},
+                          label: Text("Close"),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                ListTile(
+                  leading: Icon(Icons.home),
+                  title: Text('Home'),
+                  onTap: () {},
+                ),
+                ListTile(
+                  leading: Icon(Icons.settings),
+                  title: Text('Settings'),
+                  onTap: () {},
+                ),
+                ListTile(
+                  leading: Icon(Icons.info),
+                  title: Text('About'),
+                  onTap: () {},
+                ),
               ],
 
           )
